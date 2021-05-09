@@ -1,0 +1,472 @@
+<html>
+ <head>
+ <title>Agriculture World</title>
+ <style>
+ #base
+ {
+ width:100%;
+ }
+ t
+ {
+ font-size: 20px;
+ }
+ .sp
+ {
+ padding: 20px;
+ background: #FFCA28;
+width:100%;
+text-align: center;
+border-radius:20px;
+ }
+ .sp:link
+ {
+ text-decoration: none;
+ }
+ a:link
+ {
+ text-decoration: none;
+color: black;
+ }
+ .sp:hover
+ {
+ opacity:0.90;
+ }
+ table
+ {
+ width:100%;
+ }
+ img 
+ {
+ width:80%;
+margin:30px;
+ }
+ p
+ {
+ font-size:20px;
+ font-family: palatino;
+color: #BDBDBD;
+ }
+ td
+ {
+ width:50%;
+ }
+ .text
+ {
+ height:30px;
+ width:400px;
+ border-radius:10px;
+ }
+ textarea
+ {
+ width:400px;
+ border-radius:10px;
+ }
+ a.home:link
+ {
+ color:yellow;
+ }
+ .home:hover
+ {
+ color:#FFCA28;
+ }
+ .button
+ {
+ width:100px;
+ height:50px;
+ }
+ h2.title
+ {
+ color:floralwhite;
+ }
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/
+jquery.min.js"></script>
+ <script>
+ $(document).ready(function(){
+ $("#sellForm").slideUp(1);
+ $("#purchaseForm").slideUp(1);
+ $("#sellProduct").click(function(){
+ $("#sellForm").slideToggle("slow");
+ });
+ $("#purchaseProduct").click(function(){
+ $("#purchaseForm").slideToggle("slow");
+ });
+ });
+ </script>
+ <script>
+ <script type="text/javascript">
+
+ function submits()
+ {
+ document.getElementById("messages").innerHTML="You will be notified when we find
+Buyer";
+ }
+ function submitp()
+ {
+ document.getElementById("messagep").innerHTML="You will be notified when we find
+Seller";
+ }
+ function validate_seller()
+ { 
+ var c=0;
+ var id=document.getElementById("sellerID").value;
+ var a=/^\d{10}$/;
+ if (a.test(id)==false)
+ {
+ c=1;
+ document.getElementById("p1").innerHTML="invalid id";
+ }
+ var pname=document.getElementById("sellerName").value;
+ var q1=/^[a-zA-Z][a-zA-Z0-9]+$/;
+ if (q1.test(pname)==false)
+ {
+ c=1;
+ document.getElementById("p2").innerHTML="Enter valid product name";
+ }
+ var q=document.getElementById("productNameseller").value;
+ var q2=/^[a-zA-Z][a-zA-Z0-9]+$/;
+ if(q2.test(q)==false)
+ {
+ c=1;
+ document.getElementById("p3").innerHTML="Enter valid product name";
+ }
+ var quan=document.getElementById("quantitySell").value;
+ var q3=/^[0-9]+(\.)[0-9]$/;
+ if (q3.test(quan)==false)
+ {
+ c=1;
+ document.getElementById("p4").innerHTML="enter amount of product in decimals";
+ }
+ var rate=document.getElementById("sellRate").value;
+ var q4=/^[0-9]+(\.)[0-9]$/;
+ if (q4.test(rate)==false)
+ {
+ c=1;
+ document.getElementById("p5").innerHTML="enter rate of product in number or
+decimals";
+ }
+ if(c==1)
+ return false;
+ else
+ return true;
+ }
+ function validate_buyer()
+ {
+ var c=0;
+ var bname=document.getElementById("buyerName").value;
+ var e1=/^[a-zA-Z][a-zA-Z0-9]+$/;
+ if (e1.test(bname)==false)
+ {
+ d=1;
+ document.getElementById("w1").innerHTML="Enter valid name";
+ }
+ var q=document.getElementById("productNamebuyer").value;
+ var q2=/^[a-zA-Z][a-zA-Z0-9]+$/;
+ if(q2.test(q)==false)
+ {
+ c=1;
+ document.getElementById("w2").innerHTML="Enter valid product name";
+ }
+ var quan=document.getElementById("quantityPurchase").value;
+ var q3=/^[0-9]+(\.)[0-9]$/;
+ if (q3.test(quan)==false)
+ {
+ c=1;
+ document.getElementById("w3").innerHTML="enter amount in decimals";
+ }
+
+ if(c==1)
+ return false;
+ else
+ return true;
+ } 
+ </script>
+ </head>
+ <body bgcolor="black">
+ <script>
+ function submits()
+ {
+ document.getElementById("messages").innerHTML="You will be notified when
+we find Buyer";
+ }
+ function submitp()
+ {
+ document.getElementById("messagep").innerHTML="You will be notified when
+we find Seller";
+ }
+ function validate_seller()
+ {
+ var id=document.getElementById("#sellerID").value;
+if (/\d{10}/.test(id))
+ alert("Enter valid Seller ID");
+ }
+ </script>
+ <div style="position:absolute;color:beige;"><a href="mainPage.html"><t><h2
+style="text-decoration: none" class="home">Home</h2></t></a></div>
+ <h1 align="center" style="font-size:40px;color:floralwhite">Welcome to
+Agricultural World</h1>
+ <hr style="border:2px solid grey">
+ <br><br>
+ <table>
+ <tr>
+ <td>
+
+ <table id="base">
+ <tr>
+ <td>
+ <p>Historical civilizations and modern life as we know it would not
+have been possible without agriculture. It was through the cultivation of nutritional
+food that the structure of early societies could diversify and focus on various tasks.
+ </p>
+
+ <p>Without the need to move to better hunting grounds or spend time
+on dangerous quests after seasonal sources of food, early humans were able to settle and
+use their energy towards manufacturing sophisticated tools and building permanent
+dwellings.</p>
+
+ <p>As time passed, agriculture became the most dominant land use on
+the planet, feeding a booming population and transforming natural habitats of many
+species.
+ </p>
+
+ <p>Whether the outcome of this change delivers negative or positive
+consequences depends largely on our approach. You may think it sounds counter-intuitive,
+but sustainable management of our lands can prevent many problems we are currently
+facing.</p>
+
+ <p>When done right, farmers could actually bring about many positive
+environmental impacts of agriculture that may enrich local biodiversity and boost vital
+ecosystem services.
+ </p>
+ </td>
+
+ <td>
+ <img src="agr1.jpg">
+ </td>
+ </tr>
+ </table>
+
+ <h2 class="title">Sell OR Purchase Agricultural Products</h2>
+ <table id="base">
+ <tr>
+<!-- make a sell-->
+ <td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td id="sellProduct">
+ <t><h2 id="sap">Sell Agricultural Product</h2></t>
+ </td>
+ </tr>
+<tr>
+ <td>
+ <div id="sellForm" align="left">
+
+ <h3>New Seller:</h3> <a href="register.html"
+style="text-decoration: underline;color: blue">Register Here</a>
+ <h3>Already Registered:</h3>
+<form id="sellerForm" method="post" action="/
+process_post">
+<!--sell Form-->
+ <table style="width:100%">
+ <tr>
+ <td>Seller ID:<br>(10 digit ID)</td>
+ <td><input type="text" name="sellerID"
+class="text">
+ <font color="red"><label id="p1"></
+label></font>
+ </td>
+ </tr>
+<tr>
+ <td>Seller Name:</td>
+<td><input type="text" name="sellerName"
+class="text">
+ <font color="red"><label id="p2"></
+label></font>
+ </td>
+ </tr>
+<tr>
+ <td>Product Name:</td>
+<td><input type="Text"
+name="productNameseller" class="text">
+ <font color="red"><label id="p3"></label></
+font></td>
+ </tr>
+<tr>
+ <td>Quantity (in metric tons):</td>
+<td><input type="text" name="quantitySell"
+class="text">
+ <font color="red"><label id="p4"></label></
+font></td>
+ </tr>
+<tr>
+ <td>Product Address:<br>(Address where
+product is stored at present)</td>
+ <td><textarea rows=5
+name="productAddress"></textarea></td>
+ </tr>
+<tr>
+ <td>Rate:<br>(per metric ton)</td>
+ <td><input type="text" class="text"
+name="sellRate">
+ <font color="red"><label id="p5"></
+label></font>
+ </td>
+ </tr>
+<tr>
+ <td colspan="2" class="button"
+align="center">
+<!-- <button id="submitSell"
+onclick="validate_seler()">Submit</button></td>-->
+ <input type="submit">
+ </tr>
+<tr>
+ <td colspan="2"><p id="messages"
+style="color:red"></p>
+ </td>
+ </tr>
+ </table>
+ </form>
+</div>
+ </td>
+ </tr>
+ </table>
+ </td>
+
+<!-- make a purchase-->
+ <td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td id="purchaseProduct">
+ <t><h2 id="pap">Purchase Agricultural Product</h2></t>
+ </td>
+ </tr>
+<tr>
+ <td>
+ <div id="purchaseForm">
+ <form id="buyerForm" method="post" action="/
+process_post1">
+<!--sell Form-->
+ <table style="width:100%">
+ <tr>
+ <td>Buyer Name:</td>
+<td><input type="text" name="buyerName"
+class="text">
+ <font color="red"><label id="w1"></label></
+font>
+ </td>
+ </tr>
+<tr>
+ <td>Product Name:</td>
+<td><input type="Text"
+name="productNamebuyer" class="text">
+ <font color="red"><label id="w2"></label></
+font></td>
+ </tr>
+<tr>
+ <td>Quantity (in metric tons):</td>
+<td><input type="text"
+name="quantityPurchase" class="text">
+ <font color="red"><label id="w3"></label></
+font></td>
+ </tr>
+<tr>
+ <td>Delivery Address:<br>(Address where
+product is stored at present)</td>
+ <td><textarea rows=5
+name="deliveryAddress"></textarea></td>
+ </tr>
+<tr>
+ <td colspan="2" class="button"
+align="center">
+ <input type="submit"></td>
+ </tr>
+<tr>
+ <td colspan="2"><p id="messagep"
+style="color:red"></p>
+ </td>
+ </tr>
+ </table>
+ </form>
+</div>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+
+ 
+ <h2 class="title">Type of Agricultural Product</h2>
+ <table id="base">
+ <tr>
+<!-- make a sell-->
+ <td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td>
+ <a href="organic.html">
+ <t><h2>Organic Products</h2></t>
+</a>
+ </td>
+ </tr>
+ </table>
+ </td>
+
+<!-- make a purchase-->
+ <td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td>
+ <a href="inorganic.html">
+ <t><h2>Inorganic Products</h2></t>
+</a>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+ <h2 class="title">Water Management</h2>
+ <table>
+ <tr>
+<!-- make a sell-->
+ <td valign="top">
+ <a href="waterManagement.html">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td>
+
+ <t><h2>Water Management Methods</h2></t>
+
+ </td>
+ </tr>
+ </table>
+ </a>
+ </td>
+ </tr>
+ </table>
+ <h2 class="title">Sell Biodegradable Waste</h2>
+ <table>
+ <tr>
+<!-- make a sell-->
+ <td valign="top">
+ <a href="sell1.html">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td>
+
+ <t><h2>Contact Industries to Sell Biodegradable
+waste</h2></t>
+
+ </td>
+ </tr>
+ </table>
+ </a>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+ </body>
+</html>
