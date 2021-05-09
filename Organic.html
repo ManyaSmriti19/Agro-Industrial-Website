@@ -1,0 +1,287 @@
+<html>
+ <head>
+ <title>Organic Products</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/
+angular.min.js"></script>
+ <style>
+ #base
+ {
+ width:100%;
+ }
+ t
+ {
+ font-size: 20px;
+ }
+ .sp
+ {
+ padding: 20px;
+ background: #FFCA28;
+width:100%;
+text-align: center;
+border-radius:20px;
+ }
+ .sp:link
+ {
+ text-decoration: none;
+ }
+ a:link
+ {
+ text-decoration: none;
+color: black;
+ }
+ .sp:hover
+ {
+ opacity:0.95;
+ }
+ img
+ {
+ width:80%;
+margin:30px;
+ }
+ div
+ {
+ position:relative;
+ }
+ p
+ {
+ font-size:20px;
+ font-family: palatino;
+color: #BDBDBD;
+ }
+ td
+ {
+ width:50%;
+ }
+ .text
+ {
+ height:30px;
+ width:400px;
+ border-radius:10px;
+ }
+ textarea
+ {
+ width:400px;
+ border-radius:10px;
+ } 
+ .button
+ {
+ width:100px;
+ height:50px;
+ }
+ h2.title
+ {
+ color:floralwhite;
+ }
+ table
+ {
+/* border:2px solid white;*/
+ width:100%;
+ }
+ ul
+ {
+ color:#BDBDBD;
+font-size:18px;
+ }
+ .home:alink
+ {
+ color: #FFCA28;
+ }
+ .home:hover
+ {
+ color: orange;
+ }
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/
+jquery.min.js"></script>
+ <script>
+ $(document).ready(function(){
+ $("#rawFoodForm").slideUp(1);
+ $("#processedFoodForm").slideUp(1);
+ $("#processedFood").click(function(){
+ $("#processedFoodForm").slideToggle("slow");
+ });
+ $("#rawFood").click(function(){
+ $("#rawFoodForm").slideToggle("slow");
+ });
+ });
+
+ </script>
+ </head>
+ <body bgcolor="black" ng-app="">
+ <div style="position:absolute;"><t><h2><a href="agriculture.html" style="textdecoration: none;" class="home">Back</a></h2></t></div>
+ <h1 align="center" style="font-size:40px;color:floralwhite">Organic products</
+h1>
+ <hr style="border:2px solid grey">
+ <table>
+ <tr>
+ <td colspan=2>
+ <h2 class="title">Organic Certification</h2>
+ <p>Organic certification is a certification process for producers of
+organic food and other organic agricultural products. In general, any business directly
+involved in food production can be certified, including seed suppliers, farmers, food
+processors, retailers and restaurants.
+ </p>
+<p>Requirements vary from country to country (List of countries with
+organic agriculture regulation), and generally involve a set of production standards for
+growing, storage, processing, packaging and shipping that include:
+ </p>
+<ul>
+ <li>avoidance of synthetic chemical inputs (e.g. fertilizer,
+pesticides, antibiotics, food additives), irradiation, and the use of sewage sludge.</
+li>
+ <li>avoidance of genetically modified seed.</li>
+<li>use of farmland that has been free from prohibited chemical
+inputs for a number of years (often, three or more).</li>
+ <li>for livestock, adhering to specific requirements for feed,
+housing, and breeding.</li>
+ <li>maintaining strict physical separation of organic products
+from non-certified products.</li>
+ </ul>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="2">
+ <h2 class="title">Organic Farming</h2>
+ </td>
+ </tr>
+ <tr>
+ <td valign="top">
+ <p>It is a method of farming system which primarily aimed at
+cultivating the land and raising crops in such a way, as to keep the soil alive and in
+good health by use of organic wastes (crop, animal and farm wastes, aquatic wastes) and
+other biological materials along with beneficial microbes (biofertilizers) to release
+nutrients to crops for increased sustainable production in an eco friendly pollution
+free environment.
+ </p>
+<p>As per the definition of the United States Department of
+Agriculture (USDA) study team on organic farming “organic farming is a system which
+avoids or largely excludes the use of synthetic inputs (such as fertilizers, pesticides,
+hormones, feed additives etc) and to the maximum extent feasible rely upon crop
+rotations, crop residues, animal manures, off-farm organic waste, mineral grade rock
+additives and biological system of nutrient mobilization and plant protection”.
+ </p>
+<p>FAO suggested that “Organic agriculture is a unique production
+management system which promotes and enhances agro-ecosystem health, including
+biodiversity, biological cycles and soil biological activity, and this is accomplished
+by using on-farm agronomic, biological and mechanical methods in exclusion of all
+synthetic off-farm inputs”.
+ </p>
+ </td>
+<td>
+ <img src="org1.jpg">
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2><h2 class="title">Purchase Organic Products</h2></td>
+ </tr>
+ <tr>
+ <td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td id="processedFood">
+ <t><h2>Food Products</h2></t>
+ </td>
+ </tr>
+<tr>
+ <td>
+ <div id="processedFoodForm">
+ <form method="post" id="processed_Food" action="/
+process_post4">
+<!--sell Form-->
+ <table style="width:100%">
+ <tr>
+ <td>Buyer Name:</td>
+<td><input type="text" name="buyerName"
+class="text"></td>
+ </tr>
+<tr>
+ <td>Product Name:</td>
+<td><input type="text"
+name="productNamebuyer" class="text"><br>
+ <q style="font-size:13px;color:grey">Eg.
+Grains,Flour,Fruits etc.</q><br></td>
+
+ </tr>
+<tr>
+ <td>Quantity (in kg):</td>
+<td><input type="number"
+name="quantityPurchase" class="text"></td>
+ </tr>
+<tr>
+ <td>Delivery Address:<br>(Address where
+product is stored at present)</td>
+ <td><textarea rows=5
+name="deliveryAddress"></textarea></td>
+ </tr>
+<tr>
+ <td colspan="2" class="button"
+align="center"><input type="submit"></td>
+ </tr>
+<tr>
+ <td colspan="2"><p id="messagep"
+style="color:red"></p>
+ </td>
+ </tr>
+ </table>
+ </form>
+</div>
+ </td>
+ </tr>
+ </table>
+ </td>
+<td valign="top">
+ <table class="sp" style="width:100%">
+ <tr>
+ <td id="rawFood">
+ <t><h2>Other Products</h2></t>
+ </td>
+ </tr>
+<tr>
+ <td>
+ <div id="rawFoodForm">
+ <form id="other" method="post" action="/process_post5">
+<!--sell Form-->
+ <table style="width:100%">
+ <tr>
+ <td>Buyer Name:</td>
+<td><input type="text" name="buyerName"
+class="text"></td>
+ </tr>
+<tr>
+ <td>Product:</td>
+<td><input type="text"
+name="productNamebuyer" class="text"><br>
+ <q style="font-size:13px;color:grey">Eg.
+Fowers,Fibers,Fertilizers</q></td>
+ </tr>
+<tr>
+ <td>Quantity (in kg):</td>
+<td><input type="number"
+name="quantityPurchase1" class="text"></td>
+ </tr>
+<tr>
+ <td>Delivery Address:<br>(Address where
+product is stored at present)</td>
+ <td><textarea rows=5
+name="deliveryAddress1"></textarea></td>
+ </tr>
+<tr>
+ <td colspan="2" class="button"
+align="center"><input type="submit"></td>
+ </tr>
+<tr>
+ <td colspan="2"><p id="messagep1"
+style="color:red"></p>
+ </td>
+ </tr>
+ </table>
+ </form>
+</div>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+ </body>
+</html>
