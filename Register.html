@@ -1,0 +1,115 @@
+<html>
+ <head>
+ <style>
+ table
+ {
+ /*padding: 20;*/
+opacity: 0.95;
+ }
+ td.input
+ {
+ padding: 5;
+padding-left: 10px;
+ padding-right: 10px;
+ font-size: 20px;
+ text-align: left;
+ }
+ td.contact
+ {
+ padding-left: 20px;
+ }
+ .sp
+ {
+ padding: 20px;
+ background: #FFCA28;
+width:100%;
+text-align: center;
+border-radius:20px;
+ }
+ input.text
+ {
+ font-size:15px;
+ border-radius: 10px;
+ height:40px; 
+ }
+ a:hover.login
+ {
+ color:red;
+ }
+ t
+ {
+ font-size: 20px;
+ }
+ p
+ {
+ font-size:20px;
+ font-family: palatino;
+color: black;
+ }
+ a.home:link
+ {
+ color:yellow;
+ }
+ .home:hover
+ {
+ color:#FFCA28;
+ }
+ </style>
+ </head>
+ <body bgcolor="black">
+ <div style="position:absolute;color:beige;"><a href="agriculture.html"><t><h2
+style="text-decoration: none" class="home">Back</h2></t></a></div>
+ <table width="100%" height="100%">
+ <tr style="height: 100px">
+ </tr>
+ <tr><td colspan="2">
+ <h1 style="font-size:50px;text-align: center;color:whitesmoke" >Seller
+Registration Form</h1>
+ <table align="center" style="border-style: dashed;border-radius:
+20px;border-color: #FFCA28"><tr><td>
+ <table class="sp">
+ <form method="post" action="/process_post6" name="form1">
+ <tr>
+ <td class="input">Seller Name:</td>
+ <td class="input"><input type="text" size=40 class="text" name="name"></
+td>
+ </tr>
+ <tr>
+ <td class="input">Seller Id:</td>
+ <td class="input"><input type="text" name="UserId" class="text"
+size="40"></td>
+ </tr>
+ <tr>
+ <td class="input">Email:</td>
+ <td class="input"><input type="text" size=40 class="text"
+name="email"></td>
+ </tr>
+ <tr>
+ <td class="input">Address:</td>
+ <td class="input"><textarea rows=5 cols=40 style="font-size:
+15px;border-radius: 10px;" name="address"></textarea></td>
+ </tr>
+ <tr>
+ <td class="input">Mobile no.:</td>
+ <td class="input" align="left">
+ <select>
+ <script>
+ for (i=1;i<=195;i++)
+ {
+ document.write("<option>+ " + i + "</option>");
+ }
+ </script>
+ </select><input type="text" size=33 maxlength=10 class="text"
+name="Contact"></td>
+ </tr>
+ <tr>
+ <td colspan=2 class="input"><p align="center"><input type="submit"
+name="submit" value="Register" style="font-size:30px;"></p><hr>
+ <p>If already Registered. <a href="agriculture.html"
+class="login">Click to go back to main page</a></p></td>
+ </tr>
+ </form>
+ </table></td></tr></table></td></tr>
+ </table>
+ </body>
+</html>
